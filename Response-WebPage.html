@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+    background-color: lightblue;
+}
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+    margin-bottom: 10px;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+.logo {
+    background-color: lightgray;
+    color: black;
+    border: .2mm ridge rgba(10, 10, 10, 10);
+}
+
+.chatwall {
+    background-color: lightgray;
+    color:black;
+    border: .2mm ridge rgba(10, 10, 10, 10);
+    aspect-ratio: 8/9;
+}
+
+.main {
+    background-color: rgb(192, 231, 192);
+    color:black;
+    border: .2mm ridge rgba(10, 10, 10, 10);
+    aspect-ratio: 16/9;
+}
+
+.myvideo, .raisehand {
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    border: .2mm ridge rgba(10, 10, 10, 10);
+    aspect-ratio: 4/2;
+    margin-bottom: 5px;
+}
+
+.leave {
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    border: .2mm ridge rgba(10, 10, 10, 10);
+    aspect-ratio: 4/1;
+}
+
+.party-video {
+    display: flex;
+    justify-content: center;
+    grid-gap: 20px;
+    color: black;
+} 
+
+.partyvideo {
+    background-color: lightgoldenrodyellow;
+    border: 1px solid black;
+    text-align: center;
+    aspect-ratio: 1/1;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    /* For tablets */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-3">&nbsp;</div>
+
+    <div class="col-6 logo">
+        <h1>Logo</h1>
+    </div>
+
+    <div class="col-3">&nbsp;</div>
+</div>
+
+<div class="row">
+    <div class="col-3 chatwall">
+        <p>Chat Wall</p>
+    </div>
+
+    <div class="col-6 main">
+        <p>Main Video</p>
+    </div>
+
+    <div class="col-3">
+        <div class="myvideo">My Video</div>
+        <div class="raisehand">Raise Hand</div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">&nbsp;</div>
+
+    <div class="col-6">
+        <div class="col-6 party-video">
+            <div class="partyvideo">Party Video</div>
+            <div class="partyvideo">Party Video</div>
+            <div class="partyvideo">Party Video</div>
+        </div>
+        <div class="col-6 party-video">     
+            <div class="partyvideo">Party Video</div>
+            <div class="partyvideo">Party Video</div>
+            <div class="partyvideo">Party Video</div>
+        </div>  
+    </div>
+
+    <div class="col-3">
+        <div class="leave">Leave</div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
